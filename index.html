@@ -3,11 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <title>joker counter</title>
 </head>
 <body>
-    
 
+    <header class="main-head">
+        <input id="toggle" type="checkbox">
+        <img class="jokers joker-right" src="https://i.ibb.co/NfCNG9H/imageedit-4-2234785379.jpg" alt="Black Joker">
+      
+        <div class="hidden">
+            <section class="choose-section">
+                <h1 class="main-title">Joker counter</h1>
+                <div>
+                    <h1>სტანდარტული</h1>
+                    <div>
+                        <ul>
+                            <li>ხიშტი</li>
+                            <li>დვაინოლი</li>
+                            <li>კოვზირის არჩევა</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <h1>9-იანები</h1>
+                    <div>
+                        <ul>
+                            <li>ხიშტი</li>
+                            <li>დვაინოლი</li>
+                            <li>კოვზირის არჩევა</li>
+                        </ul>
+                    </div>
+                </div>
     
-</body>
+                <div>
+                    <h1>
+                        დამატებით შეცვალე რაც მოგესურვება:
+                    </h1>
+                    <div>
+                    <ul>
+                        <li>ხიშტი რაოდენობა</li>
+                        <li>განსაზღვრული კოვზირი</li>
+                        <li>დვაინოლი ან მეტი</li>
+                        <li>ტურების რაოდენობა</li>
+                   
+                    </ul>
+                    </div>
+                </div> 
+        </div>
+        <button class="future-btn" for="toggle">დაწყება</button>
+        <img class="jokers joker-left" src="./image/red_joker.jpg" alt="Red Joker">
+    </header>
+
+
+        
+
+            <script>
+document.querySelector('.future-btn').addEventListener('click', function() {
+    const header = document.querySelector('.main-head');
+    const button = this;
+    
+    // Add slide-in class to trigger joker animations
+    header.classList.add('slide-in');
+    
+    // Hide button
+    button.classList.add('button-hide');
+    
+    // Remove button from DOM after animation completes
+    setTimeout(() => {
+        button.style.display = 'none';
+    }, 500);
+});     document.querySelector('.future-btn').addEventListener('click', () => {
+    document.querySelector('.main-head').classList.toggle('slide-out')});
+
+
+    let btn = document.querySelector(".future-btn");
+    let hiddenSection = document.querySelector(".hidden")
+    function show(){
+        hiddenSection.style.display = "block"
+
+    }
+    btn.addEventListener('click', show())
+            </script>
+    </body>
 </html>
