@@ -4,6 +4,20 @@
     box-sizing: border-box;
 }
 
+body{
+    font-family: "BPG Phone Sans Bold", sans-serif;
+
+}
+.choose-section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .main-head {
     display: flex;
     justify-content: center;
@@ -16,15 +30,14 @@
 
 
 .main-title {
-    font-size: 70px;
-    color: #ff0000; /* Bright red color */
-    font-family: 'Arial', sans-serif;
-    font-weight: bold;
+    font-size: 4vw;
+    color: #ff0000; 
+    font-family: "BPG Phone Sans Bold", sans-serif;
     text-transform: uppercase;
     text-align: center;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Adds a shadow for depth */
-    margin-bottom: 20px; /* Adds spacing below the title */
-    z-index: 1000;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+    margin-bottom: 20px; 
+    
 }
 
 .jokers {
@@ -38,11 +51,13 @@
 .joker-left {
     left:  50%;
     transform: translateX(-100%);
+    z-index: 999;
 }
 
 .joker-right {
     right: 50%;
     transform: translateX(100%);
+    z-index: 999;
 }
 
 /* Animation states for jokers */
@@ -71,7 +86,6 @@ box-shadow: -24px 0px 64px 1px rgba(0,0,0,0.75);
     border: none;
     border-radius: 25px;
     padding: 12px 30px;
-    font-family: 'Arial', sans-serif;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -80,7 +94,7 @@ box-shadow: -24px 0px 64px 1px rgba(0,0,0,0.75);
     position: absolute;
     overflow: hidden;
     cursor: pointer;
-    z-index: 1;
+    z-index: 1000;
 }
 
 .future-btn:hover {
@@ -118,5 +132,155 @@ box-shadow: -24px 0px 64px 1px rgba(0,0,0,0.75);
 
 .hidden{
     display: none;
+    width: 100%;
+    height: 100%;
+}
+
+#wesebi{
+    display: flex;
+    align-items: center;
+    width: 30%;
+    flex-direction: column;
+    justify-content: center;
+    gap: 70px;
+}
+
+#dropdowns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* ********* btn *********  */
+
+
+#btn-xishti{
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem 1rem;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    font-family: "BPG Phone Sans Bold", sans-serif;
+    font-size: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+
+
+
+
+#btn-premia{
+    display: flex !important;
+    width: 50%;
+    height: 100%;
+    padding: 0.5rem 1rem;
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+    font-family: "BPG Phone Sans Bold", sans-serif;
+    font-size: 1vw;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    cursor: pointer;
+    gap: 10px;
+}
+
+
+.btn-start{
+    padding: 0.4rem 2rem;
+    background-color: blue;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.8vw;
+    color: #fff;
+    font-family: "BPG Phone Sans Bold", sans-serif;
+    -webkit-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+cursor: pointer;
+transition: all 0.2s ease-in-out;
+
+}
+
+
+.btn-start:hover{
+    transform: scale(1.1);
+    -webkit-box-shadow: 0px 0px 57px -11px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 0px 57px -11px rgba(0,0,0,1);
+    box-shadow: 0px 0px 57px -11px rgba(0,0,0,1);}
+   
+
+    .arrow {
+        position: relative;
+        z-index: 0.1;
+        width: 20px;
+        height: 20px;
+        transition: transform 0.3s;
+    }
     
+    #btn-xishti.pressed .arrow {
+        transform: rotate(180deg);
+    }
+
+
+/*////////// dropdowns ////////////*/
+
+
+.dropdown-section{
+    position: relative;
+}
+
+.dropdown-content{
+    display: none;
+}
+
+
+
+.xishti-input{
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 100%;
+    height: 30px;
+    margin-top: 5px;
+    text-align: center;
+    font-size: 15px ;
+    position: absolute;
+}
+
+.fa-x,.fa-check{
+    font-size: 15px;
+}
+
+
+/* //////////// player inputs ///////////*/
+
+
+.players{
+    display: flex;
+    width: 100%;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-group{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group input{
+    width: 100%;
+}
+
+.input-group label{
+    font-size: 1vw;
 }
