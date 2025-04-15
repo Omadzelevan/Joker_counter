@@ -13,8 +13,12 @@ const mainHead = document.querySelector(".main-head")
 
 
 
+let wantRandom = document.querySelector(".wantRandom")
+
 
 function onClick(a){
+
+
     if(a == 1 && pressed == false){
         pressed = true;
         xishtiInput.style.display = "block";
@@ -32,26 +36,61 @@ function onClick(a){
     }
 }
 
+function closeHead(){
+    const xishtiValue = document.forms['myForm']['xishtiValue'].value;
 
-function closeHead(){     
-    const xishtiValue = document.querySelector('.xishti-input').value;
+    let first = document.forms['myForm']["first"].value;
+    let second = document.forms['myForm']["second"].value;
+    let third = document.forms['myForm']["third"].value;
+    let forth = document.forms['myForm']["forth"].value;
+
+
+
+    if(first =='' || second == ''||third==''||forth==''){
+        alert('შეავსეთ სახელები')
+        
+    }else{
+        //if want random
+    let players = [first,second,third,forth]
+
+
+    let randomizedPlayers = [1,2,3,4];
+
+    if(wantRandom.checked) {
+        let randNumbers = [];
+        
+        // Generate unique random numbers
+        while(randNumbers.length < 4) {
+            let rand = Math.floor(Math.random() * 4);
+            if(!randNumbers.includes(rand)) {
+                randNumbers.push(rand);
+            }
+        }
+        
+        // Create randomized players array using random indices
+        randNumbers.forEach((randomIndex, i) => {
+            randomizedPlayers[i] = players[randomIndex];
+        });
+
+        console.log('Random order:', randomizedPlayers);
+    } else {
+        randomizedPlayers = [...players];
+    }
+
+
+
     mainHead.style.display = "none";
+
+    
+    randomizedPlayers.forEach(data => {
+        console.log(data)
+    })
+    }
+
+    console.log(xishtiValue, " = xishti")
+    console.log(is_Premia_active, ' = premia')
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 document.querySelector('.future-btn').addEventListener('click', function() {
     const header = document.querySelector('.main-head');
@@ -75,3 +114,8 @@ document.querySelector('.future-btn').addEventListener('click', function() {
     btn_xishti.addEventListener('click', () => {
         btn_xishti.classList.toggle('pressed');
     });
+
+
+
+
+

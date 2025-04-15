@@ -15,54 +15,51 @@
         <div class="hidden">
             <section class="choose-section">
                 <h1 class="main-title">Joker counter</h1>
-                <div id="wesebi">
+                <form name="myForm" action="/index.html" id="wesebi">
                     <div class="players">
                         <div class="input-group">
                             <label for="first">პირველი</label>
-                            <input name="first" type="text" placeholder="გიორგი">
+                            <input class='first' name="first" type="text" placeholder="გიორგი">
                         </div>
                         <div class="input-group">
                             <label for="second">მეორე</label>
-                            <input name="second" type="text" placeholder="ლუკა" >
+                            <input class='second' name="second" type="text" placeholder="ლუკა" >
                         </div>
                         <div class="input-group">
                             <label for="third">მესამე</label>
-                            <input name="third" type="text" placeholder="ნიკა">
+                            <input class='third' name="third" type="text" placeholder="ნიკა">
 
                         </div>
                         <div class="input-group">
                             <label for="forth">მეოთხე</label>
-                            <input name="forth" type="text" placeholder="ლევანი">
+                            <input class='forth' name="forth" type="text" placeholder="ლევანი">
                         </div>
-                        
-                        
-
                     </div>
 
                     <div>
                         <label for="random">რანდომურად დაარიგოს?</label>
-                        <input type="checkbox" name="random" id="random">
+                        <input class="wantRandom"type="checkbox" name="random" id="random">
                     </div>
 
                     
                     <div id="dropdowns">
                         <div class="dropdown-section">
-                            <button onclick="onClick(1)" id="btn-xishti" class="xishti-btn"> ხიშტი<img  class="arrow"  src="./assets/arrow.png" alt=""></button>
+                            <button type="button" onclick="onClick(1)" id="btn-xishti" class="xishti-btn"> ხიშტი<img  class="arrow"  src="./assets/arrow.png" alt=""></button>
                             <div class="dropdown-content ">
-                                <input name="xishtiValue" class="xishti-input" placeholder="200" type="text">
+                                <input name="xishtiValue" class="xishti-input" placeholder="200" value="200" type="text">
                             </div>
                         </div>
                         
                             
-                        <button onclick="onClick(0)" id="btn-premia">პრემია<i class="fa-solid fa-check"></i></button>
+                        <button type="button" onclick="onClick(0)" id="btn-premia">პრემია<i class="fa-solid fa-check"></i></button>
                         
                         
                     </div>
 
                     <div>
-                        <button onclick="closeHead()" class="btn-start">დაწყება</button>
+                        <button type="button" onclick="closeHead()" class="btn-start">დაწყება</button>
                     </div>
-                </div>
+                </form>
              
         <button class="future-btn" for="toggle">დაწყება </button>
         <img class="jokers joker-left" src="./image/red_joker.jpg" alt="Red Joker">
