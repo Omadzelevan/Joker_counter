@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="/node_modules/bpg-phone-sans-bold/css/bpg-phone-sans-bold.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="/node_modules/bpg-phone-sans-bold/css/bpg-phone-sans-bold.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
     <title>joker counter</title>
-</head>
-<body>
+  </head>
+  <body>
     <header class="main-head">
         <input id="toggle" type="checkbox">
         <img class="jokers joker-right" src="https://i.ibb.co/NfCNG9H/imageedit-4-2234785379.jpg" alt="Black Joker">
@@ -50,7 +56,7 @@
                             </div>
                         </div>
                         
-                            
+
                         <button type="button" onclick="onClick(0)" id="btn-premia">პრემია<i class="fa-solid fa-check"></i></button>
                         
                         
@@ -65,11 +71,195 @@
         <img class="jokers joker-left" src="./image/red_joker.jpg" alt="Red Joker">
     </header>
 
-    <section>
+    <section class="game">
+      <table border="1">
+        <tr class="table-head">
+          <td>Rounds</td>
+          <td id="first"></td>
+          <td id="second"></td>
+          <td id="third"></td>
+          <td id="forth"></td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td><input class="1-points" type="text" /></td>
+          <td><input class="2-points" type="text" /></td>
+          <td><input class="3-points" type="text" /></td>
+          <td><input class="4-points" type="text" /></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><input class="1-points" type="text" /></td>
+          <td><input class="2-points" type="text" /></td>
+          <td><input class="3-points" type="text" /></td>
+          <td><input class="4-points" type="text" /></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><input class="1-points" type="text" /></td>
+          <td><input class="2-points" type="text" /></td>
+          <td><input class="3-points" type="text" /></td>
+          <td><input class="4-points" type="text" /></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td><input class="1-points" type="text"></td>
+          <td><input class="2-points" type="text"></td>
+          <td><input class="3-points" type="text"></td>
+          <td><input class="4-points" type="text"></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td><input class="1-points" type="text"></td>
+          <td><input class="2-points" type="text"></td>
+          <td><input class="3-points" type="text"></td>
+          <td><input class="4-points" type="text"></td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td><input class="1-points" type="text"></td>
+          <td><input class="2-points" type="text"></td>
+          <td><input class="3-points" type="text"></td>
+          <td><input class="4-points" type="text"></td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td><input class="1-points" type="text"></td>
+          <td><input class="2-points" type="text"></td>
+          <td><input class="3-points" type="text"></td>
+          <td><input class="4-points" type="text"></td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td><input class="1-points" type="text"></td>
+          <td><input class="2-points" type="text"></td>
+          <td><input class="3-points" type="text"></td>
+          <td><input class="4-points" type="text"></td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td><input class="1-points" type="text"></td>
+          <td><input class="2-points" type="text"></td>
+          <td><input class="3-points" type="text"></td>
+          <td><input class="4-points" type="text"></td>
+        </tr>
+        <tr>
+          <td>ჯამი</td>
+          <td class="1-1-sum"></td>
+          <td class="2-1-sum"></td>
+          <td class="3-1-sum"></td>
+          <td class="4-1-sum"></td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td><input class="1-points" type="text"></td>
+          <td><input class="2-points" type="text"></td>
+          <td><input class="3-points" type="text"></td>
+          <td><input class="4-points" type="text"></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><input class="1-points" type="text"></td>
+          <td><input class="2-points" type="text"></td>
+          <td><input class="3-points" type="text"></td>
+          <td><input class="4-points" type="text"></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><input class="1-points" type="text"></td>
+          <td><input class="2-points" type="text"></td>
+          <td><input class="3-points" type="text"></td>
+          <td><input class="4-points" type="text"></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td><input class="1-points" type="text"></td>
+          <td><input class="2-points" type="text"></td>
+          <td><input class="3-points" type="text"></td>
+          <td><input class="4-points" type="text"></td>
+        </tr>
+        <tr>
+          <td>ჯამი</td>
+          <td class="1-2-sum"></td>
+          <td class="2-2-sum"></td>
+          <td class="3-2-sum"></td>
+          <td class="4-2-sum"></td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td><input class="1-points" type="text"></td>
+          <td><input class="2-points" type="text"></td>
+          <td><input class="3-points" type="text"></td>
+          <td><input class="4-points" type="text"></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><input class="1-points" type="text"></td>
+          <td><input class="2-points" type="text"></td>
+          <td><input class="3-points" type="text"></td>
+          <td><input class="4-points" type="text"></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><input class="1-points" type="text"></td>
+          <td><input class="2-points" type="text"></td>
+          <td><input class="3-points" type="text"></td>
+          <td><input class="4-points" type="text"></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td><input class="1-points" type="text"></td>
+          <td><input class="2-points" type="text"></td>
+          <td><input class="3-points" type="text"></td>
+          <td><input class="4-points" type="text"></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td><input class="1-points" type="text"></td>
+          <td><input class="2-points" type="text"></td>
+          <td><input class="3-points" type="text"></td>
+          <td><input class="4-points" type="text"></td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td><input class="1-points" type="text"></td>
+          <td><input class="2-points" type="text"></td>
+          <td><input class="3-points" type="text"></td>
+          <td><input class="4-points" type="text"></td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td><input class="1-points" type="text"></td>
+          <td><input class="2-points" type="text"></td>
+          <td><input class="3-points" type="text"></td>
+          <td><input class="4-points" type="text"></td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td><input class="1-points" type="text"></td>
+          <td><input class="2-points" type="text"></td>
+          <td><input class="3-points" type="text"></td>
+          <td><input class="4-points" type="text"></td>
+        </tr>
 
-        
+        <tr>
+          <td>9</td>
+          <td><input class="1-points" type="text"></td>
+          <td><input class="2-points" type="text"></td>
+          <td><input class="3-points" type="text"></td>
+          <td><input class="4-points" type="text"></td>
+        </tr>
+
+        <tr>
+          <td>ჯამი</td>
+          <td class="1-3-sum"></td>
+          <td class="2-3-sum"></td>
+          <td class="3-3-sum"></td>
+          <td class="4-3-sum"></td>
+        </tr>
+      </table>
     </section>
-    
-            <script src="./index.js"></script>
-    </body>
+
+    <script src="./index.js"></script>
+  </body>
 </html>
